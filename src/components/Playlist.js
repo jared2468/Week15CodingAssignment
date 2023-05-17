@@ -16,7 +16,7 @@ export const PlayList = (props) => {
 
     const songs = () => (
         <ul>
-           {playlist.songs?.map((song, index) => (
+           {playlist.songs.map((song, index) => (
             <li key={index}>
                 <label> {`${song.name} Artist: ${song.artist}`} </label>
                 <button onClick={(e) => deleteSong(song._id)}>Delete</button>
@@ -26,6 +26,7 @@ export const PlayList = (props) => {
     );
 
     return (
+        console.log(playlist.songs),
         <div>
             <h1>{playlist.name}</h1>
             {

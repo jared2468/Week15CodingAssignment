@@ -7,7 +7,7 @@ export const NewSongForm = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (name && artist) {
-            props.AddNewSong({name, artist});
+            props.addNewSong({name, artist});
             setName('');
             setArtist('');
         }

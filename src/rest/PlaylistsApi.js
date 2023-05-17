@@ -6,6 +6,7 @@ class PlaylistApi {
         try {
         const resp = await fetch(PLAYLISTS_ENDPOINT);
         const data = await resp.json();
+        console.log(data);
         return data;
         } catch(e) {
             console.log('Oops, looks like fetch playlists had an issue', e);
